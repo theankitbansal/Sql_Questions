@@ -198,3 +198,60 @@ In the first example, we will only select those names in the Student table, whos
 
 5. SQL Constraints
 
+Constraints are rules which are applied on a table. For example, specifying valid limits or ranges on data in the table etc.
+
+The valid constraints in SQL are:
+
+1. NOT NULL: Specifies that this column cannot store a NULL value.
+
+Example:
+
+CREATE TABLE Student
+(
+   ID int(8) NOT NULL,
+   NAME varchar(30) NOT NULL,
+   ADDRESS varchar(50)
+);
+In the above example, we create a table STUDENT, which has some attributes it has to store. Among these attributes we declare that the columns ID and NAME cannot have NULL values in their fields using NOT NULL constraint.
+
+2. UNIQUE: Specifies that this column can have only Unique values, i.e the values cannot be repeated in the column.
+
+Example:
+
+CREATE TABLE Student
+(
+   ID int(8) UNIQUE,
+   NAME varchar(10) NOT NULL,
+   ADDRESS varchar(20)
+);
+In the above example, we create a table Student and declare the ID column to be unique using the UNIQUE constraint.
+
+3. Primary Key: It is a field using which it is possible to uniquely identify each row in a table. We will get to know about this in detail in the upcoming section.
+
+4. Foreign Key: It is a field using which it is possible to uniquely identify each row in some other table. We will get to know about this in detail in the upcoming section.
+
+5. CHECK: It validates if all values in a column satisfy some particular condition or not.
+
+Example:
+
+CREATE TABLE Student
+(
+   ID int(6) NOT NULL,
+   NAME varchar(10),
+   AGE int CHECK (AGE < 20)
+);
+Here, in the above query, we add the CHECK constraint into the table. By adding the constraint, we can only insert entries that satisfy the condition AGE < 20 into the table.
+
+6. DEFAULT: It specifies a default value for a column when no value is specified for that field.
+
+Example:
+
+CREATE TABLE Student
+(
+   ID int(8) NOT NULL,
+   NAME varchar(50) NOT NULL,
+   CLASS int DEFAULT 2
+);
+In the above query, we set a default value of 2 for the CLASS attribute. While inserting records into the table, if the column has no value specified, then 2 is assigned to that column as the default value.
+
+6. Crud Operations in SQL
