@@ -123,5 +123,78 @@ Example:
 
 INSERT INTO STUDENT (Name, Subject) VALUES ("Scaler", "DSA"); 
 
+In the above example, we insert the values “Scaler” and “DSA” in the columns Name and Subject in the STUDENT table.
 
+UPDATE: Used to update value of a table’s column.
+Example:
+
+UPDATE STUDENT   
+SET User_Name = 'Interviewbit'    
+WHERE Student_Id = '2'  
+In the above example, we update the name of the student, whose Student_ID is 2, to the User_Name = “Interviewbit”.
+
+DELETE: Used to delete one or more rows in a table.
+Example:
+
+DELETE FROM STUDENT 
+WHERE Name = "Scaler";  
+In the above example, the query deletes the row where the Name of the student is “Scaler” from the STUDENT table.
+
+3. Data Control Language(DCL): These commands are used to grant and take back access/authority (revoke) from any database user. Some commands that are a part of DCL are:
+
+Grant: Used to grant a user access privileges to a database.
+Example:
+
+GRANT SELECT, UPDATE ON TABLE_1 TO USER_1, USER_2;  
+In the above example, we grant the rights to SELECT and UPDATE data from the table TABLE_1 to users - USER_1 and USER_2.
+
+Revoke: Used to revoke the permissions from an user.
+Example:
+
+REVOKE SELECT, UPDATE ON TABLE_1 FROM USER_1, USER_2;  
+
+In the above example we revoke the rights to SELECT and UPDATE data from the table TABLE_1 from the users- USER_1 and USER_2.
+
+4. Transaction Control Language: These commands can be used only with DML commands in conjunction and belong to the category of auto-committed commands. Some commands that are a part of TCL are:
+
+COMMIT: Saves all the transactions made on a database.
+Example:
+
+DELETE FROM STUDENTS
+WHERE AGE = 16;  
+COMMIT;  
+In the above database, we delete the row where AGE of the students is 16, and then save this change to the database using COMMIT.
+
+ROLLBACK: It is used to undo transactions which are not yet been saved.
+Example:
+DELETE FROM STUDENTS 
+WHERE AGE = 16;  
+ROLLBACK;  
+By using ROLLBACK in the above example, we can undo the deletion we performed in the previous line of code, because the changes are not committed yet.
+
+SAVEPOINT: Used to roll transaction back to a certain point without having to roll back the entirity of the transaction.
+Example:
+
+SAVEPOINT SAVED;
+DELETE FROM STUDENTS 
+WHERE AGE = 16;  
+ROLLBACK TO SAVED;
+
+In the above example, we have created a savepoint just before performing the delete operation in the table, and then we can return to that savepoint using the ROLLBACK TO command.
+
+5. Data Query Language: It is used to fetch some data from a database. The command belonging to this category is:
+
+SELECT: It is used to retrieve selected data based on some conditions which are described using the WHERE clause. It is to be noted that the WHERE clause is also optional to be used here and can be used depending on the user’s needs.
+Example: With WHERE clause,
+
+SELECT Name  
+FROM Student  
+WHERE age >= 18;  
+Example: Without WHERE clause,
+
+SELECT Name  
+FROM Student 
+In the first example, we will only select those names in the Student table, whose corresponding age is greater than 17. In the 2nd example, we will select all the names from the Student table.
+
+5. SQL Constraints
 
