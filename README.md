@@ -71,6 +71,57 @@ The table below lists all the String type datatypes available in SQL, along with
 
 ![Screenshot (965)](https://user-images.githubusercontent.com/81725794/181933343-6b7af41d-5422-457e-ada3-851b6c341ef7.png)
 
+Numeric Datatypes:
+
+The table below lists all the Numeric Datatypes in SQL along with their descriptions:
+
+![Screenshot (967)](https://user-images.githubusercontent.com/81725794/181933407-9b17826c-e95b-4013-89fb-816ee8ea7fba.png)
+
+Date/Time Datatypes:
+
+The datatypes available in SQL to handle Date/Time operations effectively are called the Date/Time datatypes. The below table lists all the Date/Time variables in SQL along with their description:
+
+
+![Screenshot (967)](https://user-images.githubusercontent.com/81725794/181933419-bada0478-a17b-402a-bbee-5f08b3c2a621.png)
+
+4. SQL Commands
+
+SQL Commands are instructions that are used by the user to communicate with the database, to perform specific tasks, functions and queries of data.
+
+Types of SQL Commands:
+
+![image](https://user-images.githubusercontent.com/81725794/181933434-3e663ddc-b476-4838-9526-6d36019ac007.png)
+
+The above image broadly shows the different types of SQL commands available in SQL in the form of a chart.
+
+1. Data Definition Language(DDL): It changes a table’s structure by adding, deleting and altering its contents. Its changes are auto-committed(all changes are automatically permanently saved in the database). Some commands that are a part of DDL are:
+
+1. CREATE: Used to create a new table in the database.
+Example:
+
+CREATE TABLE STUDENT(Name VARCHAR2(20), Email VARCHAR2(100), DOB DATE);  
+
+2. ALTER: Used to alter contents of a table by adding some new column or attribute, or changing some existing attribute.
+Example:
+
+ALTER TABLE STUDENT ADD(ADDRESS VARCHAR2(20));  
+ALTER TABLE STUDENT MODIFY (ADDRESS VARCHAR2(20));  
+
+3. DROP: Used to delete the structure and record stored in the table.
+Example:
+
+DROP TABLE STUDENT;  
+
+4. TRUNCATE: Used to delete all the rows from the table, and free up the space in the table.
+Example:
+TRUNCATE TABLE STUDENT;
+
+2. Data Manipulation Language(DML): It is used for modifying a database, and is responsible for any form of change in a database. These commands are not auto-committed, i.e all changes are not automatically saved in the database. Some commands that are a part of DML are:
+
+INSERT: Used to insert data in the row of a table.
+Example:
+
+INSERT INTO STUDENT (Name, Subject) VALUES ("Scaler", "DSA"); 
 
 
 
