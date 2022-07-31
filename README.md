@@ -523,5 +523,109 @@ Consider the below Customer and Orders table,
 
 ![image](https://user-images.githubusercontent.com/81725794/182010836-96e38d52-f884-482e-b1bf-5489d56384b5.png)
 
+We will apply Left Join on the above tables, as follows,
+
+SELECT Customers.CustomerName, Orders.OrderID
+FROM Customers
+LEFT JOIN Orders
+ON Customers.CustomerID=Orders.CustomerID
+ORDER BY Customers.CustomerName;
+The top few entries of the resultant table will appear as shown in the below image.
+
+![image](https://user-images.githubusercontent.com/81725794/182010850-a638bbed-7023-4aeb-9d15-587ba89bf345.png)
+
+FULL JOIN: Returns all records from both tables when there is a match.
+
+![image](https://user-images.githubusercontent.com/81725794/182010870-96aef906-ebf8-4ff4-904f-d2a256a66309.png)
+
+Example:
+
+Consider the below tables, Customers and Orders,
+
+Table Customers:
+
+![image](https://user-images.githubusercontent.com/81725794/182010874-ebd5a49f-5654-4c23-bd8b-b9d87014b0d6.png)
+
+Table Orders:
+
+![image](https://user-images.githubusercontent.com/81725794/182010880-3d22fdd0-6bdd-4857-ba4d-ac312dd92361.png)
+
+Applying Outer Join on the above 2 tables, using the code:
+
+SELECT  ID, NAME, AMOUNT, DATE
+  FROM CUSTOMERS
+  FULL JOIN ORDERS
+  ON CUSTOMERS.ID = ORDERS.CUSTOMER_ID;
+We will get the following table as the result of the outer join.
+
+![image](https://user-images.githubusercontent.com/81725794/182010890-3fac544e-797b-41e4-b551-b81a2c4ae25e.png)
+
+13. Triggers in SQL
+
+SQL codes automatically executed in response to a certain event occurring in a table of a database are called triggers. There cannot be more than 1 trigger with a similar action time and event for one table.
+
+Syntax:
+
+Create Trigger Trigger_Name
+(Before | After)  [ Insert | Update | Delete]
+on [Table_Name]
+[ for each row | for each column ]
+[ trigger_body ]
+Example:
+
+CREATE TRIGGER trigger1
+before INSERT
+ON Student
+FOR EACH ROW
+SET new.total = (new.marks/ 10) * 100;
+Here, we create a new Trigger called trigger1, just before we perform an INSERT operation on the Student table, we calculate the percentage of the marks for each row.
+Some common operations that can be performed on triggers are:
+
+DROP: This operation will drop an already existing trigger from the table.
+Syntax:
+DROP TRIGGER trigger name;
+SHOW: This will display all the triggers that are currently present in the table.
+Syntax:
+SHOW TRIGGERS IN database_name;
+
+14. SQL Stored Procedures
+
+SQL procedures are stored in SQL codes, which can be saved for reuse again and again.
+
+Syntax:
+
+CREATE PROCEDURE procedure_name AS sql_statement
+GO;
+To execute a stored procedure,
+
+EXEC procedure_name;
+Example:
+
+CREATE PROCEDURE SelectAllCustomers AS SELECT * FROM Customers;
+GO;
+The above example creates a stored procedure called ‘SelectAllCustomers’, which selects all the records from the customer table.
+
+15. SQL Injection
+Insertion or ‘Injection’ of some SQL Query from the input data of the client to the application is called SQL Injection. They can perform CRUD operations on the database and can read to vulnerabilities and loss of data.
+
+It can occur in 2 ways:
+
+Data is used to dynamically construct an SQL Query.
+Unintended data from an untrusted source enters the application.
+The consequences of SQL Injections can be Confidentiality issues, Authentication breaches, Authorization vulnerabilities, and breaking the Integrity of the system.
+
+![image](https://user-images.githubusercontent.com/81725794/182010912-d27bd0ce-bfec-4bd5-b237-ab53993315f3.png)
+
+he above image shows an example of SQL injections, through the use of 2 tables - students and library. 
+
+Here the hacker is injecting SQL code - 
+
+UNION SELECT studentName, rollNo FROM students 
+into the Database server, where his query is used to JOIN the tables - students and library. Joining the 2 tables, the result of the query is returned from the database, using which the hacker gains access to the information he needs thereby taking advantage of the system vulnerability. The arrows in the diagram show the flow of how the SQL Injection causes the vulnerability in the database system, starting from the hacker’s computer.
+
+Conclusion
+
+Databases are growing increasingly important in our modern industry where data is considered to be a new wealth. Managing these large amounts of data, gaining insights from them and storing them in a cost-effective manner makes database management highly important in any modern software being made. To manage any form of databases/RDBMS, we need to learn SQL which allows us to easily code and manage data from these databases and create large scalable applications of the future, which caters to the needs of millions.
+
 
 
