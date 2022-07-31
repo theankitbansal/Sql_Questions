@@ -346,10 +346,41 @@ Clauses are in-built functions available in SQL and are used for filtering and a
 The below table lists some of the important SQL clauses and their description with examples:
 ![Screenshot (971)](https://user-images.githubusercontent.com/81725794/182010481-20bfa48a-7517-4d6d-aa02-4b236e742e4a.png)
 
+9. SQL Operators
 
+Operators are used in SQL to form complex expressions which can be evaluated to code more intricate queries and extract more precise data from a database.
 
+There are 3 main types of operators: Arithmetic, Comparision and Logical operators, each of which will be described below.
 
+![image](https://user-images.githubusercontent.com/81725794/182010505-0fd447da-39f4-412b-abcb-1fd1a9a2230e.png)
 
+Arithmetic Operators:
 
+Arithmetic Operators allows the user to perform arithmetic operations in SQL. The table below shows the list of arithmetic operators available in SQL:
 
+![Screenshot (972)](https://user-images.githubusercontent.com/81725794/182010577-67288a49-7139-4024-89fd-389f568114e5.png)
+
+Bitwise Operators:
+
+Bitwise operators are used to performing Bit manipulation operations in SQL. The table below shows the list of bitwise operators available in SQL:
+
+![Screenshot (972](https://user-images.githubusercontent.com/81725794/182010585-ccc39125-be23-4585-b264-7424de6ac2a7.png)
+
+Relational Operators:
+
+Relational operators are used to performing relational expressions in SQL, i.e those expressions whose value either result in true or false. The table below shows the list of relational operators available in SQL:
+
+![Screenshot (973)](https://user-images.githubusercontent.com/81725794/182010591-0206a708-dcb2-4dac-ba79-7f6ab3b1df20.png)
+
+Compound Operators:
+
+Compound operators are basically a combination of 2 or more arithmetic or relational operator, which can be used as a shorthand while writing code. The table below shows the list of compound operators available in SQL:
+
+![Screenshot (974)](https://user-images.githubusercontent.com/81725794/182010595-04c2b176-ae77-4b07-8856-b3490219243e.png)
+
+Logical Operators:
+
+Logical operators are used to combining 2 or more relational statements into 1 compound statement whose truth value is evaluated as a whole. The table below shows the SQL logical operators with their description:
+
+![Uploading Screenshot (975).png…]()
 
