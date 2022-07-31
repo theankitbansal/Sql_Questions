@@ -384,3 +384,72 @@ Logical operators are used to combining 2 or more relational statements into 1 c
 
 ![Uploading Screenshot (975).png…]()
 
+10. Keys in SQL
+A database consists of multiple tables and these tables and their contents are related to each other by some relations/conditions. To identify each row of these tables uniquely, we make use of SQL keys. A SQL key can be a single column or a group of columns used to uniquely identify the rows of a table. SQL keys are a means to ensure that no row will have duplicate values. They are also a means to establish relations between multiple tables in a database.
+
+Types of Keys:
+
+1. Primary Key: They uniquely identify a row in a table.
+
+Properties:
+
+Only a single primary key for a table. (A special case is a composite key, which can be formed by the composition of 2 or more columns, and act as a single candidate key.)
+The primary key column cannot have any NULL values.
+The primary key must be unique for each row.
+Example:
+
+CREATE TABLE Student (
+   ID int NOT NULL,
+   LastName varchar(255) NOT NULL,
+   FirstName varchar(255),
+   Class int,
+   PRIMARY KEY (ID)
+);
+The above example creates a table called STUDENT with some given properties(columns) and assigns the ID column as the primary key of the table. Using the value of ID column, we can uniquely identify its corresponding row.
+
+2. Foreign Key: Foreign keys are keys that reference the primary keys of some other table. They establish a relationship between 2 tables and link them up.
+
+Example: In the below example, a table called Orders is created with some given attributes and its Primary Key is declared to be OrderID and Foreign Key is declared to be PersonId referenced from the Person's table. A person's table is assumed to be created beforehand.
+
+CREATE TABLE Orders (
+   OrderID int NOT NULL,
+   OrderNumber int NOT NULL,
+   PersonID int,
+   PRIMARY KEY (OrderID),
+   FOREIGN KEY (PersonID) REFERENCES Persons(PersonID)
+);
+Super Key: It is a group of single or multiple keys which identifies row of a table.
+Candidate Key: It is a collection of unique attributes that can uniquely identify tuples in a table.
+Alternate Key: It is a column or group of columns that can identify every row in a table uniquely.
+Compound Key: It is a collection of more than one record that can be used to uniquely identify a specific record.
+Composite Key: Collection of more than one column that can uniquely identify rows in a table.
+Surrogate Key: It is an artificial key that aims to uniquely identify each record.
+Amongst these, the Primary and Foreign keys are most commonly used.
+
+11. Functions in SQL
+
+The SQL Server has many builtin functions some of which are listed below:
+
+SQL Server String Functions:
+The table below lists some of the String functions in SQL with their description:
+
+![Screenshot (976)](https://user-images.githubusercontent.com/81725794/182010679-9210988c-d958-4f27-8850-cea01f73bc4a.png)
+
+SQL Server Numeric Functions:
+The table below lists some of the Numeric functions in SQL with their description:
+
+![Screenshot (977)](https://user-images.githubusercontent.com/81725794/182010688-2b276b43-f5eb-48c9-b65f-e8b3b92f9a31.png)
+
+SQL Server Date Functions:
+The table below lists some of the Date functions in SQL with their description:
+
+![Screenshot (978)](https://user-images.githubusercontent.com/81725794/182010728-e121f4e2-372b-43fb-ba01-799b42fc644c.png)
+
+SQL Server Advanced Functions:
+The table below lists some of the Advanced functions in SQL with their description:
+
+![Screenshot (979)](https://user-images.githubusercontent.com/81725794/182010732-2d5239ea-d642-42e1-b2d7-ac15ac5773a3.png)
+
+
+
+
