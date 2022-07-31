@@ -255,3 +255,77 @@ CREATE TABLE Student
 In the above query, we set a default value of 2 for the CLASS attribute. While inserting records into the table, if the column has no value specified, then 2 is assigned to that column as the default value.
 
 6. Crud Operations in SQL
+
+CRUD is an abbreviation for Create, Read, Update and Delete. These 4 operations comprise the most basic database operations. The relevant commands for these 4 operations in SQL are:
+
+Create: INSERT
+Read: SELECT
+Update: UPDATE
+Delete: DELETE
+
+![image](https://user-images.githubusercontent.com/81725794/182010294-0a393d37-f1cf-4048-8173-8657e62bc98c.png)
+
+The above image shows the pillars of SQL CRUD operations.
+
+INSERT: To insert any new data ( create operation - C ) into a database, we use the INSERT INTO statement.
+SQL Syntax:
+
+INSERT INTO name_of_table(column1, column2, ....)
+   VALUES(value1, value2, ....)
+Example:
+
+INSERT INTO student(ID, name, phone, class)
+   VALUES(1, 'Scaler', '+1234-4527', 12)
+For multiple rows,
+
+SQL Syntax:
+
+INSERT INTO name_of_table(column1, column2, ....)
+   VALUES(value1, value2, ....),
+   (new_value1, new_value2, ...),
+   (....), ... ;
+   
+Example:
+
+INSERT INTO student(ID, name, phone, class)
+   VALUES(1, 'Scaler', '+1234-4527', 12),
+   (2, 'Interviewbit', '+4321-7654', 11);
+The above example will insert into the student table having the values 1, Scaler, +1234-5678 and 12 to the columns ID, name, phone and class columns.
+
+SELECT: We use the select statement to perform the Read ( R ) operation of CRUD.
+SQL Syntax:
+
+SELECT column1,column2,.. FROM name_of_table;
+
+Example:
+
+SELECT name,class FROM student;
+The above example allows the user to read the data in the name and class columns from the student table.
+
+UPDATE: Update is the ‘U’ component of CRUD. The Update command is used to update the contents of specific columns of specific rows.
+SQL Syntax:
+
+UPDATE name_of_table
+SET column1=value1,column2=value2,...
+WHERE conditions...;
+Example:
+
+UPDATE customers
+SET phone = '+1234-9876'
+WHEREID = 2;
+The above SQL example code will update the table ‘customers’ whose ID is 2 with the new given phone number.
+
+DELETE:
+The Delete command is used to delete or remove some rows from a table. It is the ‘D’ component of CRUD.
+
+SQL Syntax:
+
+DELETE FROM name_of_table
+WHERE condition1, condition2, ...;
+Example:
+
+DELETE FROM student
+WHERE class = 11;
+The above SQL example code will delete the row from table student, where the class = 11 conditions becomes true.
+
+7. Important SQL Keywords
