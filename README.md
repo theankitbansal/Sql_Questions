@@ -450,6 +450,78 @@ The table below lists some of the Advanced functions in SQL with their descripti
 
 ![Screenshot (979)](https://user-images.githubusercontent.com/81725794/182010732-2d5239ea-d642-42e1-b2d7-ac15ac5773a3.png)
 
+12. Joins in SQL
+
+Joins are a SQL concept that allows us to fetch data after combining multiple tables of a database.
+
+The following are the types of joins in SQL:
+
+INNER JOIN: Returns any records which have matching values in both tables.
+
+![image](https://user-images.githubusercontent.com/81725794/182010754-50b71a40-1167-4534-9f31-576abac01b63.png)
+
+Example:
+
+Consider the following tables,
+
+![image](https://user-images.githubusercontent.com/81725794/182010762-3eee5256-dcf1-48d3-a06d-7390d49c97ef.png)
+
+Let us try to build the below table, using Joins,
+
+![image](https://user-images.githubusercontent.com/81725794/182010772-68665642-26d4-4d21-85f8-73951d1b42fd.png)
+
+The SQL code will be as follows,
+
+SELECT orders.order_id, products.product_name,customers.customer_name,products.price
+FROM orders
+INNER JOIN products ON products.product_id = order.product_id
+INNER JOIN customers on customers.customer_id = order.customer_id;
+NATURAL JOIN: It is a special type of inner join based on the fact that the column names and datatypes are the same on both tables.
+Syntax:
+
+Select * from table1 Natural JOIN table2;
+Example:
+
+Select * from Customers Natural JOIN Orders;
+
+In the above example, we are merging the Customers and Orders table shown above using a NATURAL JOIN based on the common column customer_id.
+
+RIGHT JOIN: Returns all of the records from the second table, along with any matching records from the first.
+
+![image](https://user-images.githubusercontent.com/81725794/182010788-5894acbf-45b0-4fd9-b2d0-15680de83156.png)
+
+Example:
+
+Let us define an Orders table first,
+
+![image](https://user-images.githubusercontent.com/81725794/182010794-7452a1d3-fac9-4dfe-8594-536ec70e1af8.png)
+
+Let us also define an Employee table,
+
+![image](https://user-images.githubusercontent.com/81725794/182010801-4112ff04-ce21-4f25-a2fa-4b2b10ac46e1.png)
+
+Applying right join on these tables,
+
+SELECT Orders.OrderID, Employees.LastName, Employees.FirstName
+FROM Orders
+RIGHT JOIN Employees
+ON Orders.EmployeeID = Employees.EmployeeID
+ORDER BY Orders.OrderID;
+The resultant table will be,
+
+![image](https://user-images.githubusercontent.com/81725794/182010811-b8fee322-2d66-4f78-9e2a-105ec919304c.png)
+
+LEFT JOIN: Returns all of the records from the first table, along with any matching records from the second table.
+
+![image](https://user-images.githubusercontent.com/81725794/182010818-0b6a8fe2-3b0d-4752-a1b1-649f27778183.png)
+
+Example:
+
+Consider the below Customer and Orders table,
+
+![image](https://user-images.githubusercontent.com/81725794/182010832-47f641f3-4336-44b0-8fa6-f21b15781ee0.png)
+
+![image](https://user-images.githubusercontent.com/81725794/182010836-96e38d52-f884-482e-b1bf-5489d56384b5.png)
 
 
 
