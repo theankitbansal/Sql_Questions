@@ -329,3 +329,27 @@ WHERE class = 11;
 The above SQL example code will delete the row from table student, where the class = 11 conditions becomes true.
 
 7. Important SQL Keywords
+
+![image](https://user-images.githubusercontent.com/81725794/182010452-e1b77e1d-c533-49c0-82da-15d7329ac7f3.png)
+
+The below table lists some important keywords used in SQL, along with their description and example.
+![Screenshot (968)](https://user-images.githubusercontent.com/81725794/182010467-5eb4b5bb-6682-46e8-8f83-666ad44ab83a.png)
+
+![Screenshot (969)](https://user-images.githubusercontent.com/81725794/182010469-4bf32bc2-d040-4e86-8c5c-00b301a86dae.png)
+
+![Screenshot (970)](https://user-images.githubusercontent.com/81725794/182010477-74a7d6e8-3c3a-47d1-aa41-05bed30e4750.png)
+
+8. Clauses in SQL
+
+Clauses are in-built functions available in SQL and are used for filtering and analysing data quickly allowing the user to efficiently extract the required information from the database.
+
+The below table lists some of the important SQL clauses and their description with examples:
+![Screenshot (971)](https://user-images.githubusercontent.com/81725794/182010481-20bfa48a-7517-4d6d-aa02-4b236e742e4a.png)
+
+
+
+
+
+
+
+
